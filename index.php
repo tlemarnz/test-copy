@@ -4,14 +4,14 @@
   <body>
 	<a href="https://pantip.com" class='cs-test_naja'>Visit pantip</a>
 	<a href="https://pantip.com" class='test_naja'>Visit pantip2</a>
-	<a href="http://www.hitviews.com">Visit hitviews</a>
+	<a href="http://www.hitviews.net">Visit hitviews</a>
   </body>
 <script src="https://code.jquery.com/jquery-3.2.1.min.js"
   integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
   crossorigin="anonymous"></script>
   <script type="text/javascript">
-$(document).ready(function () {
-	$( "a" ).click(function() {
+
+$(document).on('click', 'a', function (e) {
  var str = "cs-";
 		var full_class_name = typeof $(this).attr('class');
 		if ((full_class_name != undefined) || (full_class_name.indexOf(str) != -1) ) {
@@ -23,7 +23,6 @@ $(document).ready(function () {
 				}
 		});
 		}
-});
 });
 
 
