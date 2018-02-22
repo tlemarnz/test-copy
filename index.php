@@ -6,7 +6,9 @@
 	<a href="https://pantip.com" class='test_naja'>Visit pantip2</a>
 	<a href="http://www.hitviews.com">Visit hitviews</a>
   </body>
-<script>
+<script src="https://code.jquery.com/jquery-3.2.1.min.js"
+  integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+  crossorigin="anonymous"></script>
 $(document).ready(function () {
 	$( "a" ).click(function() {
  var str = "cs-";
