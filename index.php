@@ -7,7 +7,8 @@
 	<a href="http://www.hitviews.com">Visit hitviews</a>
   </body>
 <script>
-$( "a" ).click(function() {
+$(document).ready(function () {
+	$( "a" ).click(function() {
  var str = "cs-";
 		var full_class_name = typeof $(this).attr('class');
 		if ((full_class_name != undefined) || (full_class_name.indexOf(str) != -1) ) {
@@ -20,6 +21,8 @@ $( "a" ).click(function() {
 		});
 		}
 });
+});
+
 
 </script>
 </html>
