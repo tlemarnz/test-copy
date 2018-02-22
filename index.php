@@ -2,39 +2,26 @@
   <head>
   </head>
   <body>
-		<div>Try scrolling the iframe.</div>
-		<p>Paragraph - <span>Scroll happened!</span></p>
-				<div>Try scrolling the iframe.</div>
-		<p>Paragraph - <span>Scroll happened!</span></p>		<div>Try scrolling the iframe.</div>
-		<p>Paragraph - <span>Scroll happened!</span></p>		<div>Try scrolling the iframe.</div>
-		<p>Paragraph - <span>Scroll happened!</span></p>		<div>Try scrolling the iframe.</div>
-		<p>Paragraph - <span>Scroll happened!</span></p>		<div>Try scrolling the iframe.</div>
-		<p>Paragraph - <span>Scroll happened!</span></p>		<div>Try scrolling the iframe.</div>
-		<p>Paragraph - <span>Scroll happened!</span></p>		<div>Try scrolling the iframe.</div>
-		<p>Paragraph - <span>Scroll happened!</span></p>		<div>Try scrolling the iframe.</div>
-		<p>Paragraph - <span>Scroll happened!</span></p>		<div>Try scrolling the iframe.</div>
-		<p>Paragraph - <span>Scroll happened!</span></p>		<div>Try scrolling the iframe.</div>
-		<p>Paragraph - <span>Scroll happened!</span></p>		<div>Try scrolling the iframe.</div>
-		<p>Paragraph - <span>Scroll happened!</span></p>		<div>Try scrolling the iframe.</div>
-		<p>Paragraph - <span>Scroll happened!</span></p>		<div>Try scrolling the iframe.</div>
-		<p>Paragraph - <span>Scroll happened!</span></p>		<div>Try scrolling the iframe.</div>
-		<p>Paragraph - <span>Scroll happened!</span></p>		<div>Try scrolling the iframe.</div>
-		<p>Paragraph - <span>Scroll happened!</span></p>		<div>Try scrolling the iframe.</div>
-		<p>Paragraph - <span>Scroll happened!</span></p>		<div>Try scrolling the iframe.</div>
-		<p>Paragraph - <span>Scroll happened!</span></p>
-		<input type="text" class="test-input">
-    <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+	<a href="https://pantip.com" class='cs-test_naja'>Visit pantip</a>
+	<a href="https://pantip.com" class='test_naja'>Visit pantip2</a>
+	<a href="http://www.hitviews.com">Visit hitviews</a>
   </body>
 <script>
-		$(window).scroll(function(e) {
-			var timeout = null;
-			clearTimeout(timeout);
-			timeout = setTimeout(function() {
-				console.log('xxxxx');
-				var scroll = $(window).scrollTop();
-				$('.test-input').val(scroll);
-				
-			}, 200);
+
+$(document).on('click', 'a', function (e) {
+		var str = "cs-";
+		var full_class_name = typeof $(this).attr('class');
+		if ((full_class_name != undefined) || (full_class_name.indexOf(str) != -1) ) {
+			var myClasses = this.classList;
+				$.each(myClasses, function (key, class_name) {
+				if (class_name.indexOf(str) != -1) {
+					$event = class_name;
+					alert($event);
+				}
 		});
+		}
+		
+});
+
 </script>
 </html>
